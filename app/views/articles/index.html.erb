@@ -1,0 +1,9 @@
+<h1>Hello, Rails!</h1>
+<ul>
+    <% @article.each do |x| %>
+        <li><%= x.title %></li>
+        <li><%= x.body %></li>
+        <a href="<%= article_path(x) %>" > See this Blog </a>
+    <% end %>  
+</ul>
+<a href="http://127.0.0.1:3000/articles/new" > Create a new Blog </a>
