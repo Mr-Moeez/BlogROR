@@ -1,0 +1,10 @@
+<ul>
+    <li><%= @article.title %></li>
+    <li><%= @article.body %></li>
+</ul>
+<a href="http://127.0.0.1:3000/articles"> Back </a>
+<%= link_to "Edit", edit_article_path(@article) %>
+<%= link_to "Destroy", article_path(@article), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %>
